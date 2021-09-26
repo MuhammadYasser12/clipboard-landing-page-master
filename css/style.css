@@ -1,0 +1,299 @@
+:root {
+  --StrongCyan: hsl(171, 66%, 44%);
+  --LightBlue: hsl(233, 100%, 69%);
+  --DarkGrayishBlue: hsl(210, 10%, 33%);
+  --GrayishBlue: hsl(201, 11%, 66%);
+  --Main-Padding: 0 20px;
+}
+
+/* Start Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.padding {
+  padding-top: var(--mainpadding);
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 992px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+/* End Global Rules */
+
+/* Start Companent */
+.main-heading {
+  text-align: center;
+  padding: var(--Main-Padding);
+}
+
+p {
+  color: #777;
+}
+
+.main-buttom {
+  text-align: center;
+  margin-top: 20px;
+  padding: var(--Main-Padding);
+}
+
+.main-buttom button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.main-buttom button:first-child {
+  background-color: var(--StrongCyan);
+}
+
+.main-buttom button:last-child {
+  background-color: var(--LightBlue);
+}
+
+.main-buttom button:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .main-buttom button:last-child {
+    display: block;
+    margin: 20px auto 0;
+  }
+}
+
+.padding {
+  padding-top: 80px;
+}
+
+/* End Companent */
+
+/* Start Header */
+
+header {
+  text-align: center;
+  background-image: url(../images/bg-header-desktop.png);
+  background-size: cover;
+}
+
+header img {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  header {
+    background-image: url(../images/bg-header-mobile.png);
+  }
+}
+/* End Header */
+
+/* Start Tracking */
+
+.content {
+  display: flex;
+  flex-direction: row;
+  padding-top: 60px;
+}
+
+.content > img {
+  margin-left: -35px;
+  max-width: 100%;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 120px;
+}
+
+.content-text .box {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    padding: var(--Main-Padding);
+    padding-top: 30px;
+  }
+  .content > img {
+    margin-left: 0;
+  }
+  .content-text {
+    padding: 30px 0 0;
+    text-align: center;
+  }
+}
+
+/* End Tracking */
+
+/* Start access */
+.img {
+  text-align: center;
+  padding: var(--Main-Padding);
+  padding-top: 50px;
+}
+
+.img img {
+  max-width: 100%;
+}
+/* End access */
+
+/* Start supercharge */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.supercharge .box {
+  text-align: center;
+}
+
+.supercharge .box img {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: var(--Main-Padding);
+  }
+  .supercharge .box {
+    padding-bottom: 40px;
+  }
+}
+/* End supercharge */
+
+/* Start logo */
+.logo .container {
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .logo .container img {
+    margin: 35px;
+  }
+}
+/* End logo */
+
+/* Start Footer */
+footer {
+  background-image: url(../images/bg-header-desktop.png);
+  background-size: cover;
+}
+
+footer .container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 0;
+}
+
+footer .container > img {
+  width: 50px;
+  height: 50px;
+}
+
+.container .forinfo ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 10px;
+}
+
+.container .forinfo ul:first-child li {
+  margin-right: 100px;
+}
+
+.container .forinfo ul:last-child li {
+  margin-right: 50px;
+}
+
+.links i {
+  margin-left: 20px;
+}
+
+.container .forinfo ul li:hover,
+.links i:hover {
+  cursor: pointer;
+  color: var(--LightBlue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+  footer {
+    height: 500px;
+  }
+
+  .container .forinfo ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container .forinfo ul:last-child {
+    margin-top: -20px;
+  }
+
+  .container .forinfo ul:first-child li {
+    margin: 10px 0;
+  }
+
+  .container .forinfo ul:last-child li {
+    margin: 10px 0;
+  }
+
+  footer .links {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+/* End Footer */
